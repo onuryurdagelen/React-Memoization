@@ -1,10 +1,10 @@
 import { useContext,useState } from "react";
 import React from 'react'
-import UserContext from "../context/UserContext";
+import {useUser} from "../context/UserContext";
 
 const Profile = () => {
     const [loading, setLoading] = useState(false)
-    const {user,setUser} = useContext(UserContext);
+    const {user,setUser} = useUser();
     console.log(user);
     const handleLogin = () =>{
       setLoading(true);
